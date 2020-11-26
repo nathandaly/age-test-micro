@@ -14,8 +14,5 @@ return static function (App $app) {
         return $response;
     });
 
-    $app->get('/', function (Request $request, Response $response) {
-        $response->getBody()->write('Hello world!');
-        return $response;
-    });
+    $app->get('/', 'App\Http\Controllers\HomeController:index')->setName('home.index');
 };
