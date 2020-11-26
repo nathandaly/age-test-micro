@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d0d60f22cd8c98d97b5ecc5a32d7cbf",
+    "content-hash": "f3ccfb89fca373f9f15bfa0828c3508e",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -353,6 +353,59 @@
             "time": "2018-07-31T19:32:56+00:00"
         },
         {
+            "name": "illuminate/bus",
+            "version": "v8.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/bus.git",
+                "reference": "4ac5d91c8b93515c92a7737de3263573a053e3ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/bus/zipball/4ac5d91c8b93515c92a7737de3263573a053e3ff",
+                "reference": "4ac5d91c8b93515c92a7737de3263573a053e3ff",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/pipeline": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "suggest": {
+                "illuminate/queue": "Required to use closures when chaining jobs (^7.0)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Bus\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Bus package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-11-05T17:12:14+00:00"
+        },
+        {
             "name": "illuminate/collections",
             "version": "v8.16.1",
             "source": {
@@ -574,6 +627,123 @@
             "time": "2020-11-24T16:13:01+00:00"
         },
         {
+            "name": "illuminate/events",
+            "version": "v8.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/events.git",
+                "reference": "95abbfd663a53953fa8ede83619fc74c7fca444e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/95abbfd663a53953fa8ede83619fc74c7fca444e",
+                "reference": "95abbfd663a53953fa8ede83619fc74c7fca444e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "^8.0",
+                "illuminate/collections": "^8.0",
+                "illuminate/container": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/macroable": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Events\\": ""
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Events package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-11-04T14:05:19+00:00"
+        },
+        {
+            "name": "illuminate/filesystem",
+            "version": "v8.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/filesystem.git",
+                "reference": "8c9d927c2c1bcc48cce6de4c7b3fcb84860bf123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/8c9d927c2c1bcc48cce6de4c7b3fcb84860bf123",
+                "reference": "8c9d927c2c1bcc48cce6de4c7b3fcb84860bf123",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/macroable": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0",
+                "symfony/finder": "^5.1"
+            },
+            "suggest": {
+                "ext-ftp": "Required to use the Flysystem FTP driver.",
+                "illuminate/http": "Required for handling uploaded files (^7.0).",
+                "league/flysystem": "Required to use the Flysystem local and FTP drivers (^1.1).",
+                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^1.0).",
+                "league/flysystem-cached-adapter": "Required to use the Flysystem cache (^1.0).",
+                "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
+                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
+                "symfony/filesystem": "Required to enable support for relative symbolic links (^5.1).",
+                "symfony/mime": "Required to enable support for guessing extensions (^5.1)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Filesystem package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-11-16T15:14:47+00:00"
+        },
+        {
             "name": "illuminate/macroable",
             "version": "v8.16.1",
             "source": {
@@ -612,6 +782,54 @@
                 }
             ],
             "description": "The Illuminate Macroable package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-10-27T15:20:30+00:00"
+        },
+        {
+            "name": "illuminate/pipeline",
+            "version": "v8.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/pipeline.git",
+                "reference": "d406237ea39f6c655569551a8bfb2d00ace6e43d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/pipeline/zipball/d406237ea39f6c655569551a8bfb2d00ace6e43d",
+                "reference": "d406237ea39f6c655569551a8bfb2d00ace6e43d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Pipeline\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Pipeline package.",
             "homepage": "https://laravel.com",
             "support": {
                 "issues": "https://github.com/laravel/framework/issues",
@@ -685,6 +903,122 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2020-11-19T17:43:32+00:00"
+        },
+        {
+            "name": "illuminate/view",
+            "version": "v8.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/view.git",
+                "reference": "696a1d6d2213be192429e97245a3d2bb4d6d1849"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/696a1d6d2213be192429e97245a3d2bb4d6d1849",
+                "reference": "696a1d6d2213be192429e97245a3d2bb4d6d1849",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/collections": "^8.0",
+                "illuminate/container": "^8.0",
+                "illuminate/contracts": "^8.0",
+                "illuminate/events": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/macroable": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\View\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate View package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-11-02T14:01:41+00:00"
+        },
+        {
+            "name": "jenssegers/blade",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/blade.git",
+                "reference": "22a3700e9fc469c19dd1c5e5bd1b9138195e421f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/blade/zipball/22a3700e9fc469c19dd1c5e5bd1b9138195e421f",
+                "reference": "22a3700e9fc469c19dd1c5e5bd1b9138195e421f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/view": "^5.5|^6.0|^7.0|^8.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Blade\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "The standalone version of Laravel's Blade templating engine for use outside of Laravel.",
+            "keywords": [
+                "blade",
+                "laravel",
+                "render",
+                "template",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/jenssegers/blade/issues",
+                "source": "https://github.com/jenssegers/blade/tree/v1.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jenssegers",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/jenssegers-blade",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-09-17T08:25:26+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -1369,6 +1703,47 @@
                 "source": "https://github.com/PHP-DI/PhpDocReader/tree/2.2.1"
             },
             "time": "2020-10-12T12:39:22+00:00"
+        },
+        {
+            "name": "php-di/slim-bridge",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI/Slim-Bridge.git",
+                "reference": "e7a568c00ecf6b0128f2a751990e06e77bedec68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI/Slim-Bridge/zipball/e7a568c00ecf6b0128f2a751990e06e77bedec68",
+                "reference": "e7a568c00ecf6b0128f2a751990e06e77bedec68",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1",
+                "php-di/invoker": "^2.0.0",
+                "php-di/php-di": "^6.0.0",
+                "slim/slim": "^4.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0",
+                "zendframework/zend-diactoros": "^2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DI\\Bridge\\Slim\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP-DI integration in Slim",
+            "support": {
+                "issues": "https://github.com/PHP-DI/Slim-Bridge/issues",
+                "source": "https://github.com/PHP-DI/Slim-Bridge/tree/3.0.1"
+            },
+            "time": "2020-01-13T19:11:12+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -2179,6 +2554,67 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/console/tree/v5.1.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T12:01:57+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v5.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "e70eb5a69c2ff61ea135a13d2266e8914a67b3a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/e70eb5a69c2ff61ea135a13d2266e8914a67b3a0",
+                "reference": "e70eb5a69c2ff61ea135a13d2266e8914a67b3a0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/finder/tree/v5.1.8"
             },
             "funding": [
                 {
@@ -4638,12 +5074,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "563faed0e5e24a5b639fbd30d8f3921bb11fccc0"
+                "reference": "fa05999280434eacf621cc78ab9179d9394c7998"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/563faed0e5e24a5b639fbd30d8f3921bb11fccc0",
-                "reference": "563faed0e5e24a5b639fbd30d8f3921bb11fccc0",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/fa05999280434eacf621cc78ab9179d9394c7998",
+                "reference": "fa05999280434eacf621cc78ab9179d9394c7998",
                 "shasum": ""
             },
             "conflict": {
@@ -4767,7 +5203,7 @@
                 "paragonie/random_compat": "<2",
                 "passbolt/passbolt_api": "<2.11",
                 "paypal/merchant-sdk-php": "<3.12",
-                "pear/archive_tar": "<1.4.4",
+                "pear/archive_tar": "<1.4.11",
                 "personnummer/personnummer": "<3.0.2",
                 "phpfastcache/phpfastcache": ">=5,<5.0.13",
                 "phpmailer/phpmailer": "<6.1.6",
@@ -4948,7 +5384,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-23T21:01:44+00:00"
+            "time": "2020-11-26T07:02:13+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -6026,7 +6462,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2",
+        "php": "^7.4",
         "ext-json": "*"
     },
     "platform-dev": [],

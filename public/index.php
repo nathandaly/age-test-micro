@@ -11,6 +11,10 @@ require __DIR__ . './../vendor/autoload.php';
 
 $containerBuilder = new ContainerBuilder();
 
+if (getenv('ENVIRONMENT') === 'production') {
+    $containerBuilder->enableDefinitionCache();
+}
+
 $settings = require __DIR__ . '/../core/settings.php';
 $settings($containerBuilder);
 

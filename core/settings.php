@@ -23,7 +23,6 @@ return static function (ContainerBuilder $containerBuilder) {
         'prefix'    => $settingsArray['DB_PREFIX'] ?? '',
     ];
 
-    // Global Settings Object
     $containerBuilder->addDefinitions([
         'settings' => $settings,
     ]);
