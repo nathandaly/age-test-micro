@@ -13,7 +13,11 @@ final class ReportController extends Controller
 {
     public function __invoke(Request $request, ResponseInterface $response)
     {
-        $entries = $this->container->get('db')->table('entries')->get();
+        $entries = $this->container
+            ->get('db')
+            ->table('entries')
+            ->orderBy('id', 'DESC')
+            ->get();
 
         return $this->view($response, 'home/report', [
             'entries' => $entries,
