@@ -7,9 +7,9 @@ namespace App\Http\Controllers;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Psr7\Request;
 
-class HomeController extends Controller
+final class HomeController extends Controller
 {
-    public function index(Request $request, ResponseInterface $response): ResponseInterface
+    public function __invoke(Request $request, ResponseInterface $response)
     {
         return $this->view($response, 'home/index', []);
     }

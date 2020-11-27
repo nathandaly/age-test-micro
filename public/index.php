@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Middleware\JsonBodyParserMiddleware;
 use Core\ResponseHandler;
 use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
@@ -25,6 +26,7 @@ $container = $containerBuilder->build();
 AppFactory::setContainer($container);
 $app = AppFactory::create();
 $callableResolver = $app->getCallableResolver();
+$app->add(new JsonBodyParserMiddleware());
 
 $routes = require __DIR__ . '/../core/routes.php';
 $routes($app);
