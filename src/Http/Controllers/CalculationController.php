@@ -27,11 +27,11 @@ final class CalculationController extends Controller
         return $this->json($response, [
             'age' => $age,
             'human' => 'You are ' . $human,
-            'months' => $ageCalculator->months(),
-            'days' => $ageCalculator->days(),
-            'hours' => $ageCalculator->hours(),
-            'minutes' => $ageCalculator->minutes(),
-            'seconds' => $ageCalculator->seconds(),
+            'months' => number_format($ageCalculator->months()),
+            'days' => number_format($ageCalculator->days()),
+            'hours' => number_format($ageCalculator->hours()),
+            'minutes' => number_format($ageCalculator->minutes()),
+            'seconds' => number_format($ageCalculator->seconds()),
         ]);
     }
 }
