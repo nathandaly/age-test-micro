@@ -21,7 +21,7 @@
         </nav>
     </header>
 <main>
-    <div x-data="homeData()" x-init="$watch('user.name', value => displayName = '👋 ' + value)" class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div class="p-6 text-left md:text-center lg:text-center">
             <p class="mx-auto-w-2xl text-2xl text-gray-500 lg:mx-auto">
                 Some previous entries.
