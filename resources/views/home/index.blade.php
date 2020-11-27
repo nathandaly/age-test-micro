@@ -5,12 +5,24 @@
 @endsection
 
 @section('content')
-<header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="uppercase text-center text-3xl font-bold leading-tight text-gray-900">
-            Age Test
-        </h1>
-    </div>
+<header>
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-white">Age Test</span>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900">Calculate</a>
+                            <a href="/entries" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Entries</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
 <main>
     <div x-data="homeData()" x-init="$watch('user.name', value => displayName = '👋 ' + value)" class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">

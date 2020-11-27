@@ -19,6 +19,11 @@ final class CalculationController extends Controller
         $age = new AgeDto($ageArray['years'], $ageArray['months'], $ageArray['days']);
         $human = $ageCalculator->toHumanReadable();
 
+        $this->container->get('db')->table('entries')->insert([
+            'name' => $body['name'],
+            'dob' => $body['dob'],
+        ]);
+
         return $this->json($response, [
             'age' => $age,
             'human' => 'You are ' . $human,
