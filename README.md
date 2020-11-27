@@ -41,3 +41,19 @@ I chose to use the following technologies in this project.
  - **Docker**: This is pretty standard and is used to deploy a database with an entries table already included.
  
  I look forward to discussing and answering any questions regarding my implementation further. 
+ 
+ #### Possible improvements
+ 
+ - [ ] Abstract repeating template code into partials.
+ - [ ] Improve age calculation logic and maybe introduce a "this happened on the of your birthday facts". 
+ - [ ] Improve asset compilation. 
+ - [ ] Improve the entries view page to include a breakdown of facts under each entry (maybe an accordion).
+ - [ ] Improved validation server side.
+ - [ ] Improved error handling for database interactions.
+ 
+ #### Design
+ 
+ ![form empty](https://i.imgur.com/Bn4IOU6.png "Form unpopulated")
+ ![form populated](https://i.imgur.com/hhMfBXs.png "Form populated")
+ ![entries table](https://i.imgur.com/odzy0QG.png "Entries table")
+ 
